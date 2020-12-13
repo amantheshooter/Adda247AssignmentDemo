@@ -3,7 +3,6 @@ package com.example.adda247assignment.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.adda247assignment.R
 import com.example.adda247assignment.model.StudentData
@@ -39,9 +38,9 @@ class StudentAdapter : RecyclerView.Adapter<StudentAdapter.ViewHolder>() {
         holder.itemView.active_status.text = currentStudent.status
 
         if (currentStudent.status.toString().contains("In")) {
-            holder.itemView.active_status.setTextColor(ContextCompat.getColor(holder.itemView.context, R.color.colorPrimary))
-        }else{
-            holder.itemView.active_status.setTextColor(ContextCompat.getColor(holder.itemView.context, R.color.colorAccent))
+            holder.itemView.active_status.setBackgroundResource(R.drawable.rect_inactive)
+        } else {
+            holder.itemView.active_status.setBackgroundResource(R.drawable.rect_active)
         }
     }
 

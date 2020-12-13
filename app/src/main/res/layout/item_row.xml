@@ -2,9 +2,8 @@
 
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:cardCornerRadius="@dimen/_8sdp">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,28 +14,47 @@
             android:id="@+id/txt_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/_8sdp"
+            android:drawablePadding="@dimen/_8sdp"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_8sdp"
             android:text="@string/app_name"
-            android:textSize="@dimen/_16sp" />
+            android:textSize="@dimen/_16sp"
+            app:drawableStartCompat="@drawable/person_outline_black_18dp" />
 
         <TextView
             android:id="@+id/txt_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/_8sdp"
-            android:text="@string/temp_email" />
+            android:drawablePadding="@dimen/_8sdp"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_8sdp"
+            android:text="@string/temp_email"
+            android:textSize="@dimen/_16sp"
+            app:drawableStartCompat="@drawable/email_black_18dp" />
 
         <TextView
             android:id="@+id/active_status"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="end"
-            android:padding="@dimen/_8sdp"
-            android:text="@string/active" />
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:padding="@dimen/_4sdp"
+            android:paddingStart="@dimen/_16dp"
+            android:paddingEnd="@dimen/_16dp"
+            android:text="@string/active"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/_1dp"
+            android:layout_marginTop="@dimen/_8sdp"
             android:background="@color/colorPrimary" />
     </LinearLayout>
 

@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         mainViewModel = ViewModelProviders.of(this).get(StudentViewModel::class.java)
-        title = "My Student List"
+        title = getString(R.string.title)
         val recyclerView = student_list_rv
         recyclerView!!.setHasFixedSize(true)
 

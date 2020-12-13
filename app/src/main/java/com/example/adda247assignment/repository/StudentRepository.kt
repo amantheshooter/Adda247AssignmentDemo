@@ -26,7 +26,7 @@ class StudentRepository {
                     var myData = resp.body()
 
                     try {
-                        for (data in myData!!.data)
+                        for (data in myData!!.data!!)
                             mStudentModelList.add(data)
                     } catch (ex: Exception) {
                         ex.printStackTrace()
