@@ -16,13 +16,11 @@ class StudentRepository {
     fun getMutableLiveData(): MutableLiveData<List<StudentData>> {
 
         val userDataService = RetrofitClient.service
-        val call = userDataService.apiRequestsArray
+        val call = userDataService.getStudentArray("1")
 
         call.enqueue(object : Callback<StudentModel> {
             override fun onResponse(call: Call<StudentModel>, resp: Response<StudentModel>) {
-//                val gson = GsonBuilder().create()
                 if (resp.body() != null) {
-                    //Log.e("data",json.toString())
                     var myData = resp.body()
 
                     try {
